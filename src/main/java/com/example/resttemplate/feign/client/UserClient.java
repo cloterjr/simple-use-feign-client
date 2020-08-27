@@ -10,9 +10,6 @@ import java.util.List;
 
 @FeignClient(name="users-api", url="http://localhost:3000")
 public interface UserClient {
-    @RequestMapping(method = RequestMethod.GET, value = "/users")
-    List<User> getUsers();
-
     @RequestMapping(method = RequestMethod.GET, value = "/users/{id}")
     User getUserById(@PathVariable("id") int id);
 }

@@ -1,10 +1,15 @@
 users-api:
  ribbon:
   listOfServers: http://localhost:3000
+
 feign:
  client:
   config:
    default:
-    connectTimeout: 430000
-    readTimeout: 430000
+    connectTimeout: 500000
+    readTimeout: 500000
+
+restTemplate:
+ connectTimeout: 500000
+ readTimeout: 500000
 
